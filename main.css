@@ -1,0 +1,91 @@
+html {
+	height: 100%;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #455A64;
+	height: 100%;
+	font-family: Arial;
+}
+main {
+	width: 450px;
+	height: 350px;
+	position: absolute;
+	left: calc(50% - 225px);
+	top: calc(50% - 175px);
+}
+input {
+	border: 1px solid rgba(0,0,0,0);
+	width: 318px;
+	margin-left: 25px;
+	margin-bottom: 8px;
+	font-size: 18px;
+	padding: 5px 30px;
+	outline: none;
+	border-radius: 2px;
+	transition: 0.3s all;
+}
+button {
+	margin-left: 25px;
+	margin-top: 40px;
+	background-color: #00796B;
+	color: #d5d5d5;
+	border: 0px;
+	font-size: 16px;
+	width: 220px;
+	height: 30px;
+	outline: none;
+	border-radius: 2px;
+}
+div {
+	width: 300px;
+	height: 120px;
+	padding: 40px;
+	margin-left: 25px;
+	margin-top: 80px;
+	background-color: #9E9E9E;
+	color: white;
+	border-radius: 2px;
+	font-family: monospace;
+	transition: 0.3s all;
+}
+div:empty {
+	color: #444;
+}
+div:empty:after {
+	content: 'Result container';
+}
+
+.success {
+	border-bottom: 10px solid #8BC34A;
+}
+
+.error {
+	border-bottom: 10px solid #FF5252;
+}
+
+.progress {
+	 animation: progress 3s infinite;
+}
+
+@keyframes progress {
+	0% {
+		border-bottom: 10px solid #303F9F;
+	}
+	20% {
+		border-bottom: 10px solid #3F51B5;
+	}
+	40% {
+		border-bottom: 10px solid #448AFF;
+	}
+	60% {
+		border-bottom: 10px solid #03A9F4;
+	}
+	80% {
+		border-bottom: 10px solid #0097A7;
+	}
+	100% {
+		border-bottom: 10px solid #303F9F;
+	}
+}
