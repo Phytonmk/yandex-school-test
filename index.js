@@ -11,7 +11,6 @@ const MyForm = {
 
 		let errorFields = [];
 
-		console.log(fio.split(/\s/));
 		if (fio.split(/\s/).length != 3)
 			errorFields.push('fio');
 
@@ -34,10 +33,8 @@ const MyForm = {
 		let pushIt = false;
 		if (phone.substr(0,2) != '+7')
 			pushIt = true;
-		console.log(pushIt);
 		if (!/\+{1}7{1}\({1}[0-9]{3}\){1}[0-9]{3}\-{1}[0-9]{2}\-{1}[0-9]{2}/.test(phone))
 			pushIt = true;
-		console.log(pushIt);
 		let sum = 0;
 		for (let i = 0; i < phone.length; i++) {
 			if (/[0-9]{1}/.test(phone[i]))
@@ -45,7 +42,6 @@ const MyForm = {
 		}
 		if (sum > 30)
 			pushIt = true;
-		console.log(pushIt);
 
 		if(pushIt)
 			errorFields.push('phone');
@@ -104,7 +100,6 @@ const MyForm = {
 			const inputs = $('input');
 			inputs.css('border', '1px solid rgba(0,0,0,0)');
 			for (let i = 0; i < inputs.length; i++) {
-				console.log(validation.errorFields);
 				if (validation.errorFields.indexOf(inputs[i].name) != -1)
 					$(inputs[i]).css('border', '1px solid red');
 			}
@@ -114,10 +109,6 @@ const MyForm = {
 }
 
 $('form').on('submit', () => {
-	try {
-		MyForm.submit();
-	} catch (e) {
-		console.log(e);
-	}
+	MyForm.submit();
 	return false;
 });
