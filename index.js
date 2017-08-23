@@ -69,6 +69,9 @@ const MyForm = {
 		const validation = MyForm.validate();
 		if (validation.isValid) {
 
+			const responses = ['success', 'error', 'progress'];
+			$('form').attr('action', 'response/' + responses[Math.round(2 * Math.random())] + '.json');
+
 			$.ajax({
 				url: $('form').attr('action'),
 				data: MyForm.getData(),

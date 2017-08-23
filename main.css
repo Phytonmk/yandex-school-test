@@ -64,7 +64,10 @@ div:empty:after {
 .error {
 	border-bottom: 10px solid #FF5252;
 }
-
+.progress:after {
+	content: 'In progress...' !important;
+	color: white !important;
+}
 .progress {
 	 animation: progress 3s infinite;
 }
