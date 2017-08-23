@@ -96,6 +96,7 @@ const MyForm = {
 				},
 				error: err => {
 					$('div').html('Data load error');
+					$('div').attr('class', 'error');
 				}
 			});
 		
