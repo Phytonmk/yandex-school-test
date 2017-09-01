@@ -114,6 +114,7 @@ const MyForm = {
 }
 
 $('form').on('submit', () => {
-	MyForm.submit();
+	if (!$('div').hasClass('progress'))
+		MyForm.submit();
 	return false;
 });
