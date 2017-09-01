@@ -69,6 +69,7 @@ const MyForm = {
 		const validation = MyForm.validate();
 		if (validation.isValid) {
 
+			inputs.css('border', '1px solid rgba(0,0,0,0)');
 
 			$.ajax({
 				url: $('form').attr('action'),
